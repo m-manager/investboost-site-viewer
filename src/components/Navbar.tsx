@@ -65,7 +65,7 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          to="/features"
+                          to="/features/portfolio-analysis"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#F1F0FB] hover:text-[#9b87f5] focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">Portfolio Analysis</div>
@@ -76,7 +76,7 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          to="/features"
+                          to="/features/risk-assessment"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#F1F0FB] hover:text-[#9b87f5] focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">Risk Assessment</div>
@@ -87,7 +87,7 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          to="/features"
+                          to="/features/market-insights"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#F1F0FB] hover:text-[#9b87f5] focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">Market Insights</div>
@@ -139,6 +139,17 @@ const Navbar = () => {
                           </p>
                         </Link>
                       </li>
+                      <li>
+                        <Link
+                          to="/learn-more"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#F1F0FB] hover:text-[#9b87f5] focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">Learn More</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Educational content for investors
+                          </p>
+                        </Link>
+                      </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -151,8 +162,8 @@ const Navbar = () => {
               </NavigationMenuList>
             </NavigationMenu>
             
-            <Button className="bg-[#1A1F2C] hover:bg-[#9b87f5] text-white">
-              Get Started
+            <Button asChild className="bg-[#1A1F2C] hover:bg-[#9b87f5] text-white">
+              <Link to="/get-started">Get Started</Link>
             </Button>
           </nav>
 
@@ -181,13 +192,16 @@ const Navbar = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-white">
                   <DropdownMenuItem>
-                    <Link to="/features" className="w-full">Portfolio Analysis</Link>
+                    <Link to="/features" className="w-full">All Features</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Link to="/features" className="w-full">Risk Assessment</Link>
+                    <Link to="/features/portfolio-analysis" className="w-full">Portfolio Analysis</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Link to="/features" className="w-full">Market Insights</Link>
+                    <Link to="/features/risk-assessment" className="w-full">Risk Assessment</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link to="/features/market-insights" className="w-full">Market Insights</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -206,6 +220,9 @@ const Navbar = () => {
                   <DropdownMenuItem>
                     <Link to="/resources/blog" className="w-full">Blog</Link>
                   </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link to="/learn-more" className="w-full">Learn More</Link>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               
@@ -213,8 +230,8 @@ const Navbar = () => {
                 Pricing
               </Link>
               <div className="px-4">
-                <Button className="bg-[#1A1F2C] hover:bg-[#9b87f5] text-white w-full">
-                  Get Started
+                <Button asChild className="bg-[#1A1F2C] hover:bg-[#9b87f5] text-white w-full">
+                  <Link to="/get-started">Get Started</Link>
                 </Button>
               </div>
             </div>
