@@ -13,6 +13,7 @@ import InvestmentGuidePage from "./pages/InvestmentGuidePage";
 import BlogPage from "./pages/BlogPage";
 import RiskAssessmentPage from "./pages/RiskAssessmentPage";
 import MarketInsightsPage from "./pages/MarketInsightsPage";
+import PortfolioAnalysisPage from "./pages/PortfolioAnalysisPage";
 import GetStartedPage from "./pages/GetStartedPage";
 import LearnMorePage from "./pages/LearnMorePage";
 
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/resources/blog" element={<BlogPage />} />
             <Route path="/features/risk-assessment" element={<RiskAssessmentPage />} />
             <Route path="/features/market-insights" element={<MarketInsightsPage />} />
+            <Route path="/features/portfolio-analysis" element={<PortfolioAnalysisPage />} />
             <Route path="/get-started" element={<GetStartedPage />} />
             <Route path="/learn-more" element={<LearnMorePage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
