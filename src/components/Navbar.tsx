@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import {
@@ -26,9 +27,9 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-[#1A1F2C]">
+            <Link to="/" className="text-2xl font-bold text-[#1A1F2C]">
               InvestBoost
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -36,9 +37,9 @@ const Navbar = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <a href="#" className="text-gray-700 hover:text-[#9b87f5] transition-colors">
+                  <Link to="/" className="text-gray-700 hover:text-[#9b87f5] transition-colors">
                     Home
-                  </a>
+                  </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
@@ -49,9 +50,9 @@ const Navbar = () => {
                     <ul className="grid w-[400px] gap-3 p-4">
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
-                          <a
+                          <Link
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-[#1A1F2C] to-[#403E43] p-6 no-underline outline-none focus:shadow-md"
-                            href="#features"
+                            to="/features"
                           >
                             <div className="mt-4 mb-2 text-lg font-medium text-white">
                               Investment Tools
@@ -59,41 +60,41 @@ const Navbar = () => {
                             <p className="text-sm leading-tight text-white/90">
                               Powerful analytics and investment tools designed to maximize your returns
                             </p>
-                          </a>
+                          </Link>
                         </NavigationMenuLink>
                       </li>
                       <li>
-                        <a
-                          href="#features"
+                        <Link
+                          to="/features"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#F1F0FB] hover:text-[#9b87f5] focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">Portfolio Analysis</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                             Track and optimize your investment portfolio
                           </p>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="#features"
+                        <Link
+                          to="/features"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#F1F0FB] hover:text-[#9b87f5] focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">Risk Assessment</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                             Evaluate and minimize investment risks
                           </p>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="#features"
+                        <Link
+                          to="/features"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#F1F0FB] hover:text-[#9b87f5] focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">Market Insights</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                             Stay ahead with real-time market data
                           </p>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </NavigationMenuContent>
@@ -106,46 +107,46 @@ const Navbar = () => {
                   <NavigationMenuContent className="bg-white">
                     <ul className="grid w-[300px] gap-3 p-4">
                       <li>
-                        <a
-                          href="#testimonials"
+                        <Link
+                          to="/resources/success-stories"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#F1F0FB] hover:text-[#9b87f5] focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">Success Stories</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                             Learn from our successful customers
                           </p>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="#"
+                        <Link
+                          to="/resources/investment-guide"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#F1F0FB] hover:text-[#9b87f5] focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">Investment Guide</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                             Free resources to improve your investment strategy
                           </p>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="#"
+                        <Link
+                          to="/resources/blog"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#F1F0FB] hover:text-[#9b87f5] focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">Blog</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                             Latest articles and market updates
                           </p>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <a href="#pricing" className="text-gray-700 hover:text-[#9b87f5] transition-colors">
+                  <Link to="/#pricing" className="text-gray-700 hover:text-[#9b87f5] transition-colors">
                     Pricing
-                  </a>
+                  </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -170,9 +171,9 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 bg-white">
             <div className="flex flex-col space-y-4">
-              <a href="#" className="text-gray-700 hover:text-[#9b87f5] px-4 py-2 transition-colors">
+              <Link to="/" className="text-gray-700 hover:text-[#9b87f5] px-4 py-2 transition-colors">
                 Home
-              </a>
+              </Link>
               
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center text-gray-700 hover:text-[#9b87f5] px-4 py-2 transition-colors">
@@ -180,13 +181,13 @@ const Navbar = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-white">
                   <DropdownMenuItem>
-                    <a href="#features" className="w-full">Portfolio Analysis</a>
+                    <Link to="/features" className="w-full">Portfolio Analysis</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#features" className="w-full">Risk Assessment</a>
+                    <Link to="/features" className="w-full">Risk Assessment</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#features" className="w-full">Market Insights</a>
+                    <Link to="/features" className="w-full">Market Insights</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -197,20 +198,20 @@ const Navbar = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-white">
                   <DropdownMenuItem>
-                    <a href="#testimonials" className="w-full">Success Stories</a>
+                    <Link to="/resources/success-stories" className="w-full">Success Stories</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#" className="w-full">Investment Guide</a>
+                    <Link to="/resources/investment-guide" className="w-full">Investment Guide</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#" className="w-full">Blog</a>
+                    <Link to="/resources/blog" className="w-full">Blog</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               
-              <a href="#pricing" className="text-gray-700 hover:text-[#9b87f5] px-4 py-2 transition-colors">
+              <Link to="/#pricing" className="text-gray-700 hover:text-[#9b87f5] px-4 py-2 transition-colors">
                 Pricing
-              </a>
+              </Link>
               <div className="px-4">
                 <Button className="bg-[#1A1F2C] hover:bg-[#9b87f5] text-white w-full">
                   Get Started

@@ -7,6 +7,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import FeaturesPage from "./pages/FeaturesPage";
+import SuccessStoriesPage from "./pages/SuccessStoriesPage";
+import InvestmentGuidePage from "./pages/InvestmentGuidePage";
+import BlogPage from "./pages/BlogPage";
 
 const App = () => {
   // Create a client
@@ -20,6 +24,10 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/features" element={<FeaturesPage />} />
+            <Route path="/resources/success-stories" element={<SuccessStoriesPage />} />
+            <Route path="/resources/investment-guide" element={<InvestmentGuidePage />} />
+            <Route path="/resources/blog" element={<BlogPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
